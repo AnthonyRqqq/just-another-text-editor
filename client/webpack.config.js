@@ -18,12 +18,33 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // Adds HTML Webpack Plugin
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'HTML Webpack Plugin'
+      }),
     ],
 
     module: {
       rules: [
-        
+        // Add CSS loader
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+        // Add babel
+        {
+          test: /\.(?:js|mjs|cjs)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env', { targets: "defaults" }]
+              ]
+            }
+          }
+        },
       ],
     },
   };
