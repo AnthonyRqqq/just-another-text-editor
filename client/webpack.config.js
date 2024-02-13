@@ -23,6 +23,11 @@ module.exports = () => {
         template: './index.html',
         title: 'HTML Webpack Plugin'
       }),
+      // Adds InjectManifest plugin
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js'
+      })
     ],
 
     module: {
