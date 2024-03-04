@@ -17,6 +17,10 @@
 ## Description
     
  Just Another Text Editor allows you to write code and notes whether online or offline utilizing PWA technology. For easy use, consider installing the program to your local machine.
+
+ [A link the the deployed application can be found here.](https://just-another-text-editor-fmss.onrender.com/)
+
+ ![Screenshot of the deployed application.](./screenshot.jpg)
     
 ## Installation
     
